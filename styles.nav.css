@@ -43,6 +43,7 @@ header .logo-area .logo-svg {
 header .logo-area .logo-desc {
     font-size: clamp(1.25rem, 2vw, 2.5rem);
     margin-left: 0.5rem;
+    margin-right: 1rem;
 }
 
 .nbar-wrapper {
@@ -89,7 +90,8 @@ header .logo-area .logo-desc {
 }
 
 i.bi.bi-list {
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: clamp(3rem, 5vw, 5rem);
     color: var(--yellow-rgb);
     margin-right: 1rem;
     display: inline-block;
@@ -207,4 +209,14 @@ i.bi.bi-list.expanded~.nbar-wrapper {
         background-color: currentColor;
     }
 
+}
+
+@media (max-width: 400px) {
+    header .logo-area .logo-desc {
+        font-size: clamp(1.75rem, 2.5vw, 2rem);
+    }
+
+    i.bi.bi-list {
+        font-size: clamp(4rem, 5rem, 6rem);
+    }
 }

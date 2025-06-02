@@ -26,7 +26,7 @@
 
 html,
 body {
-  min-width: 320px;
+  min-width: 400px;
   overflow-x: hidden;
 }
 
@@ -143,5 +143,14 @@ ul li a {
     font-size: 3rem;
   }
 
+
+}
+
+@media (max-width: 400px) {
+
+  .background {
+    width: 500vw;
+    height: 500vh;
+  }
 
 }
