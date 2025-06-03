@@ -64,6 +64,7 @@ section .description {
   position: relative;
 }
 
+
 .contacts-maindiv::before,
 .contacts-maindiv::after {
   content: "";
@@ -382,6 +383,8 @@ i.bi.bi-gear-fill {
   transform: translateY(-30px);
   transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
   text-align: justify;
+  margin: 0;
+  visibility: hidden;
 }
 
 
@@ -389,6 +392,8 @@ i.bi.bi-gear-fill {
   max-height: 500px;
   opacity: 1;
   transform: translateY(0);
+  visibility: visible;
+  margin: 1rem 0.5rem;
 }
 
 .flex-container {
@@ -513,7 +518,7 @@ i.bi.bi-gear-fill {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 435px) {
   html {
     font-size: clamp(8px, 3vw, 3.5vw);
   }

@@ -90,8 +90,7 @@ header .logo-area .logo-desc {
 }
 
 i.bi.bi-list {
-    /* font-size: 2rem; */
-    font-size: clamp(3rem, 5vw, 5rem);
+    font-size: clamp(3rem, 3.5vw, 4rem);
     color: var(--yellow-rgb);
     margin-right: 1rem;
     display: inline-block;
@@ -211,12 +210,12 @@ i.bi.bi-list.expanded~.nbar-wrapper {
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 435px) {
     header .logo-area .logo-desc {
-        font-size: clamp(1.75rem, 2.5vw, 2rem);
+        font-size: clamp(1rem, 1.5vw, 1.25rem);
     }
 
     i.bi.bi-list {
-        font-size: clamp(4rem, 5rem, 6rem);
+        font-size: clamp(2rem, 3rem, 4rem);
     }
 }
