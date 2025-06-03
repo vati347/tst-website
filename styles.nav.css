@@ -211,9 +211,6 @@ i.bi.bi-list.expanded~.nbar-wrapper {
 }
 
 @media (max-width: 435px) {
-    header .logo-area .logo-desc {
-        font-size: clamp(1rem, 1.5vw, 1.25rem);
-    }
 
     i.bi.bi-list {
         font-size: clamp(2rem, 3rem, 4rem);
