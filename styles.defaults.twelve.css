@@ -1,0 +1,204 @@
+:root {
+  --common-heading-color: rgb(255, 235, 59);       /* Electric yellow */
+  --common-description-color: rgb(200, 200, 200);  /* Light neutral */
+  --lightning: rgb(255, 140, 0);                   /* Danger orange glow */
+
+  --header-box-shadow-underline: rgba(0, 0, 0, 0.45);
+  --header-bg-color: rgba(38, 42, 46, 0.95);        /* Industrial concrete */
+  --header-border-bottom: rgba(255, 235, 59, 0.4);
+
+  --logo-svg-color: rgb(255, 235, 59);              /* Consistent brand */
+  --navigation-link-color: rgb(200, 200, 200);
+  --navigation-link-active-color: rgb(0, 180, 255); /* Electric blue */
+  --navigation-link-hover-color: rgb(70, 160, 80);  /* Earth-safe green */
+  --hamburger-icon-color: rgb(240, 240, 240);
+  --mobile-menu-border-color: rgb(0, 180, 255);
+
+  --hamburger-icon-clicked-glow:
+    0 0 5px rgba(0, 180, 255, 0.6),
+    0 0 10px rgba(255, 140, 0, 0.7),
+    0 0 20px rgba(255, 235, 59, 0.5),
+    0 0 40px rgba(205, 90, 60, 0.4);
+
+  --bxs-card-bg: rgba(30, 34, 38, 0.88);            /* slightly darker for cards */
+  --bxs-card-bg-mobile: rgba(25, 29, 32, 0.85);
+  --bxs-card-box-shadow: rgba(0, 0, 0, 0.35);
+  --bxs-card-border: rgba(0, 180, 255, 0.5);
+
+  --contacts-personal-info-text: rgb(200, 200, 200);
+  --contacts-name-underline: rgb(255, 235, 59);
+  --contacts-social-border: rgb(0, 180, 255);
+  --contacts-cta-button-text: rgb(30, 34, 38);
+  --contacts-cta-button-bg: rgb(255, 235, 59);
+  --contacts-cta-button-dropshadow-glow: rgba(255, 140, 0, 0.7);
+
+  --qualif-patch-fill: rgb(205, 90, 60);           /* Copper tools */
+  --qualif-separator-boxshadow-underline: rgba(255, 140, 0, 0.3);
+  --qualif-header: rgb(255, 235, 59);
+  --qualif-text: rgb(200, 200, 200);
+
+  --services-closed-bg-start: rgba(30, 34, 38, 0.6);
+  --services-opened-bg-end: rgba(45, 49, 52, 0.85);
+  --services-opened-border: rgb(0, 180, 255);
+  --services-opened-boxshadow: rgba(0, 180, 255, 0.2);
+  --service-text-and-gear: rgb(220, 220, 220);
+  --service-text-and-gear-underline-start: rgb(255, 235, 59);
+  --service-text-and-gear-underline-end: rgb(0, 180, 255);
+  --service-gear-hover: rgb(70, 160, 80);           /* Green for safety */
+  --service-expanded-color: rgb(255, 140, 0);       /* Bright orange */
+  --service-expanded-gear-color: rgb(255, 235, 59);
+
+  --section-heading-size-pc: 2rem;
+  --section-heading-size-m: 3rem;
+  --section-desc-size-pc: 1.5rem;
+  --section-desc-size-m: 2rem;
+}
+
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative;
+  min-height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('v3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+
+
+body {
+  margin-bottom: calc(60px + 1.5rem);
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 60px;
+  border-top: 2px solid var(--header-border-bottom);
+  background: var(--header-bg-color);
+  z-index: 2;
+}
+
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer div p {
+  color: var(--common-description-color);
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--common-heading-color);
+  font-weight: 800;
+}
+
+.description {
+  color: var(--common-description-color);
+  font-weight: 500;
+}
+
+.bi.bi-lightning-charge-fill {
+  color: var(--lightning);
+  font-size: 3rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.me-2 {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 992px) {
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('v3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+  }
+
+  .background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: -1;
+  }
+
+  .bi.bi-lightning-charge-fill {
+    color: var(--lightning);
+    font-size: 3rem;
+  }
+
+
+}
+
+@media (max-width: 435px) {
+
+  .background {
+    width: 500vw;
+    height: 500vh;
+  }
+
+}

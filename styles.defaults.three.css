@@ -1,0 +1,193 @@
+:root {
+  --common-heading-color: rgb(255, 165, 0);
+  --common-description-color: rgb(255, 215, 100);
+  --lightning: rgb(255, 223, 70);
+
+  --header-box-shadow-underline: rgba(30, 60, 90, 0.7);
+  --header-bg-color: rgba(20, 28, 36, 0.9);
+  --header-border-bottom: rgba(0, 0, 0, 0.5);
+
+  --logo-svg-color: rgba(255, 195, 80, 1);
+  --navigation-link-color: rgb(255, 165, 0);
+  --navigation-link-active-color: rgb(255, 215, 100);
+  --navigation-link-hover-color: rgb(255, 223, 70);
+  --hamburger-icon-color: rgb(255, 215, 100);
+  --mobile-menu-border-color: rgb(255, 165, 0);
+
+  --hamburger-icon-clicked-glow:
+    0 0 5px rgba(255, 223, 70, 1),
+    0 0 10px rgba(255, 215, 100, 0.9),
+    0 0 20px rgba(255, 200, 80, 0.8),
+    0 0 40px rgba(255, 185, 50, 0.6);
+
+  --bxs-card-bg: rgba(18, 26, 38, 0.85);
+  --bxs-card-bg-mobile: rgba(12, 20, 30, 0.85);
+  --bxs-card-box-shadow: rgba(0, 0, 0, 0.2);
+  --bxs-card-border: rgba(255, 255, 255, 0.08);
+
+  --contacts-personal-info-text: rgb(255, 215, 100);
+  --contacts-name-underline: rgb(255, 215, 100);
+  --contacts-social-border: rgb(255, 165, 0);
+  --contacts-cta-button-text: rgb(255, 165, 0);
+  --contacts-cta-button-bg: rgb(255, 215, 100);
+  --contacts-cta-button-dropshadow-glow: rgba(255, 200, 80, 1);
+
+  --qualif-patch-fill: rgb(100, 190, 180);
+  --qualif-separator-boxshadow-underline: rgba(255, 255, 255, 0.08);
+  --qualif-header: rgb(100, 190, 180);
+  --qualif-text: rgb(60, 130, 190);
+
+  --services-closed-bg-start: rgba(0, 0, 0, 0.05);
+  --services-opened-bg-end: rgba(0, 0, 0, 0.4);
+  --services-opened-border: rgb(255, 165, 0);
+  --services-opened-boxshadow: rgba(0, 0, 0, 0.25);
+  --service-text-and-gear: rgb(255, 215, 100);
+  --service-text-and-gear-underline-start: rgb(255, 215, 100);
+  --service-text-and-gear-underline-end: rgb(100, 190, 180);
+  --service-gear-hover: rgb(100, 190, 180);
+  --service-expanded-color: rgb(100, 190, 180);
+  --service-expanded-gear-color: rgb(100, 190, 180);
+
+  --section-heading-size-pc: 2rem;
+  --section-heading-size-m: 3rem;
+  --section-desc-size-pc: 1.5rem;
+  --section-desc-size-m: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative;
+  min-height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('v1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+
+
+body {
+  margin-bottom: calc(60px + 1.5rem);
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 60px;
+  border-top: 2px solid var(--header-border-bottom);
+  background: var(--header-bg-color);
+  z-index: 2;
+}
+
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer div p {
+  color: var(--common-description-color);
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--common-heading-color);
+  font-weight: 800;
+}
+
+.description {
+  color: var(--common-description-color);
+  font-weight: 500;
+}
+
+.bi.bi-lightning-charge-fill {
+  color: var(--lightning);
+  font-size: 3rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.me-2 {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 992px) {
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('v1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+  }
+
+  .bi.bi-lightning-charge-fill {
+    color: var(--lightning);
+    font-size: 3rem;
+  }
+
+
+}
+
+@media (max-width: 435px) {
+
+  .background {
+    width: 500vw;
+    height: 500vh;
+  }
+
+}

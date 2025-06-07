@@ -1,0 +1,203 @@
+:root {
+  --common-heading-color: rgb(235, 235, 235); /* Very light gray for readability */
+  --common-description-color: rgb(200, 200, 200); /* Soft text */
+  --lightning: rgb(255, 223, 0); /* Brighter lightning yellow */
+
+  --header-box-shadow-underline: rgba(0, 0, 0, 0.45); /* Subtle drop shadow */
+  --header-bg-color: rgba(25, 25, 25, 0.88); /* Industrial black with depth */
+  --header-border-bottom: rgba(255, 223, 0, 0.4); /* Yellow line matches accent */
+
+  --logo-svg-color: rgb(255, 223, 0);
+  --navigation-link-color: rgb(210, 210, 210);
+  --navigation-link-active-color: rgb(0, 255, 160); /* Bright green (active state) */
+  --navigation-link-hover-color: rgb(255, 80, 80); /* Red hover — energized */
+  --hamburger-icon-color: rgb(220, 220, 220);
+  --mobile-menu-border-color: rgb(0, 255, 160);
+
+  --hamburger-icon-clicked-glow:
+    0 0 5px rgba(0, 255, 160, 0.6),
+    0 0 10px rgba(255, 223, 0, 0.7),
+    0 0 20px rgba(255, 80, 80, 0.5),
+    0 0 40px rgba(0, 100, 255, 0.4);
+
+  --bxs-card-bg: rgba(35, 35, 35, 0.8);
+  --bxs-card-bg-mobile: rgba(20, 20, 20, 0.85);
+  --bxs-card-box-shadow: rgba(0, 0, 0, 0.35);
+  --bxs-card-border: rgba(0, 255, 160, 0.4);
+
+  --contacts-personal-info-text: rgb(240, 240, 240);
+  --contacts-name-underline: rgb(0, 255, 160);
+  --contacts-social-border: rgb(0, 255, 160);
+  --contacts-cta-button-text: rgb(20, 20, 20);
+  --contacts-cta-button-bg: rgb(255, 223, 0);
+  --contacts-cta-button-dropshadow-glow: rgba(255, 223, 0, 0.7);
+
+  --qualif-patch-fill: rgb(255, 80, 80); /* energetic red, matching hover */
+  --qualif-separator-boxshadow-underline: rgba(0, 100, 255, 0.3); /* Cool glow blue */
+  --qualif-header: rgb(235, 235, 235);
+  --qualif-text: rgb(200, 200, 200);
+
+  --services-closed-bg-start: rgba(30, 30, 30, 0.6);
+  --services-opened-bg-end: rgba(50, 50, 50, 0.85);
+  --services-opened-border: rgb(0, 255, 160);
+  --services-opened-boxshadow: rgba(0, 255, 160, 0.2);
+  --service-text-and-gear: rgb(230, 230, 230);
+  --service-text-and-gear-underline-start: rgb(255, 223, 0);
+  --service-text-and-gear-underline-end: rgb(255, 80, 80);
+  --service-gear-hover: rgb(0, 255, 255);
+  --service-expanded-color: rgb(255, 223, 0);
+  --service-expanded-gear-color: rgb(0, 255, 160);
+
+  --section-heading-size-pc: 2rem;
+  --section-heading-size-m: 3rem;
+  --section-desc-size-pc: 1.5rem;
+  --section-desc-size-m: 2rem;
+}
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: relative;
+  min-height: 100%;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('v3.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  pointer-events: none;
+
+}
+
+
+
+body {
+  margin-bottom: calc(60px + 1.5rem);
+  z-index: 1;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 60px;
+  border-top: 2px solid var(--header-border-bottom);
+  background: var(--header-bg-color);
+  z-index: 2;
+}
+
+
+footer div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+footer div p {
+  color: var(--common-description-color);
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.heading {
+  color: var(--common-heading-color);
+  font-weight: 800;
+}
+
+.description {
+  color: var(--common-description-color);
+  font-weight: 500;
+}
+
+.bi.bi-lightning-charge-fill {
+  color: var(--lightning);
+  font-size: 3rem;
+}
+
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.me-2 {
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 992px) {
+
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('v3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    pointer-events: none;
+    backdrop-filter: blur(5px);
+  }
+
+  .background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: -1;
+  }
+
+  .bi.bi-lightning-charge-fill {
+    color: var(--lightning);
+    font-size: 3rem;
+  }
+
+
+}
+
+@media (max-width: 435px) {
+
+  .background {
+    width: 500vw;
+    height: 500vh;
+  }
+
+}

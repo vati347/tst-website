@@ -13,8 +13,15 @@ $(document).ready(function () {
             }, 300);
         }
     });
-    
+
     $("#menu").click(function () {
         $(this).toggleClass("expanded");
     });
+
+
 });
+
+function switchTheme(theme) {
+    const themeLink = document.getElementById('theme-stylesheet');
+    themeLink.href = `styles.defaults.${theme}.css`; // e.g., styles.dark.css
+}
