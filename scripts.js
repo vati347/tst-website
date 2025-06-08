@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 });
 
-function switchTheme(theme) {
-    const themeLink = document.getElementById('theme-stylesheet');
-    themeLink.href = `styles.defaults.${theme}.css`; // e.g., styles.dark.css
-}
+// function switchTheme(theme) {
+//     const themeLink = document.getElementById('theme-stylesheet');
+//     themeLink.href = `styles.defaults.${theme}.css`; // e.g., styles.dark.css
+//}

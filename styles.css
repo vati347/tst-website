@@ -16,23 +16,6 @@
   padding: 1rem;
 }
 
-.style-selector {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-}
-
-.style-select {
-  border: 2px solid red;
-  border-radius: 0.25rem;
-
-  color: black;
-  font-weight: 700;
-  font-size: 1.25rem;
-  padding: 1rem;
-  margin: 0.25rem;
-}
-
 
 section .heading {
   margin-bottom: 3rem;
@@ -239,6 +222,7 @@ section .description {
   justify-content: center;
   gap: 0.75rem;
   font-size: 1.5rem;
+  -webkit-text-stroke: 1px rgb(13, 48, 85);
 }
 
 .cont-btn {

@@ -10,8 +10,8 @@
   --logo-svg-color: rgba(243, 204, 62, 1);
 
   --navigation-link-color: rgb(48, 104, 162);
-  --navigation-link-active-color: rgb(243, 204, 62);
-  --navigation-link-hover-color: rgb(243, 204, 62);
+  --navigation-link-active-color: rgb(52, 228, 255);
+  --navigation-link-hover-color: rgb(52, 228, 255);
 
   --hamburger-icon-color: rgb(243, 204, 62);
   --mobile-menu-border-color: rgb(48, 104, 162);
@@ -23,16 +23,16 @@
     0 0 40px rgba(243, 204, 62, 0.6);
 
   --bxs-card-bg: rgba(20, 30, 45, 0.75);
-  --bxs-card-bg-mobile: rgba(5, 39, 71, 0.85);
+  --bxs-card-bg-mobile: rgba(20, 30, 45, 0.75);
   --bxs-card-box-shadow: rgba(0, 0, 0, 0.15);
   --bxs-card-border: rgba(255, 255, 255, 0.15);
 
   --contacts-personal-info-text: rgb(243, 204, 62);
   --contacts-name-underline: rgb(243, 204, 62);
   --contacts-social-border: rgb(48, 104, 162);
-  --contacts-cta-button-text: rgb(33, 42, 48);
-  --contacts-cta-button-bg: rgb(243, 204, 62);
-  --contacts-cta-button-dropshadow-glow: rgba(243, 204, 62, 1);
+  --contacts-cta-button-text: rgb(20, 40, 60);
+  --contacts-cta-button-bg: rgb(60, 160, 80);
+  --contacts-cta-button-dropshadow-glow: rgb(60, 160, 80);
 
   --qualif-patch-fill: rgb(95, 162, 172);
   --qualif-separator-boxshadow-underline: rgba(255, 255, 255, 0.1);
@@ -55,66 +55,6 @@
   --section-desc-size-pc: 1.5rem;
   --section-desc-size-m: 2rem;
 }
-
-
-
-/* :root {
-  --common-heading-color: rgb(58, 123, 183);
-  --common-description-color: rgb(243, 204, 62);
-  --lightning: rgb(243, 204, 62);
-
-  --header-box-shadow-underline: rgba(58, 123, 183, 0.6);
-  --header-bg-color: rgba(33, 42, 48, 0.92);
-  --header-border-bottom: rgba(0, 0, 0, 0.4);
-
-  --logo-svg-color: rgba(243, 204, 62, 1);
-
-  --navigation-link-color: rgb(58, 123, 183);
-  --navigation-link-active-color: rgb(243, 204, 62);
-  --navigation-link-hover-color: rgb(243, 204, 62);
-
-  --hamburger-icon-color: rgb(243, 204, 62);
-  --mobile-menu-border-color: rgb(58, 123, 183);
-
-  --hamburger-icon-clicked-glow:
-    0 0 5px rgba(243, 204, 62, 1),
-    0 0 10px rgba(243, 204, 62, 0.9),
-    0 0 20px rgba(243, 204, 62, 0.8),
-    0 0 40px rgba(243, 204, 62, 0.6);
-
-  --bxs-card-bg: rgba(5, 39, 71, 0.3);
-  --bxs-card-bg-mobile: rgba(5, 39, 71, 0.85);
-  --bxs-card-box-shadow: rgba(0, 0, 0, 0.15);
-  --bxs-card-border: rgba(255, 255, 255, 0.2);
-
-  --contacts-personal-info-text: rgb(243, 204, 62);
-  --contacts-name-underline: rgb(243, 204, 62);
-  --contacts-social-border: rgb(58, 123, 183);
-  --contacts-cta-button-text: rgb(33, 42, 48);
-  --contacts-cta-button-bg: rgb(243, 204, 62);
-  --contacts-cta-button-dropshadow-glow: rgba(243, 204, 62, 1);
-
-  --qualif-patch-fill: rgb(95, 162, 172);
-  --qualif-separator-boxshadow-underline: rgba(255, 255, 255, 0.1);
-  --qualif-header: rgb(95, 162, 172);
-  --qualif-text: rgb(58, 123, 183);
-
-  --services-closed-bg-start: rgba(0, 0, 0, 0);
-  --services-opened-bg-end: rgba(0, 0, 0, 0.4);
-  --services-opened-border: rgb(58, 123, 183);
-  --services-opened-boxshadow: rgba(0, 0, 0, 0.2);
-  --service-text-and-gear: rgb(243, 204, 62);
-  --service-text-and-gear-underline-start: rgb(243, 204, 62);
-  --service-text-and-gear-underline-end: rgb(95, 162, 172);
-  --service-gear-hover: rgb(95, 162, 172);
-  --service-expanded-color: rgb(95, 162, 172);
-  --service-expanded-gear-color: rgb(95, 162, 172);
-
-  --section-heading-size-pc: 2rem;
-  --section-heading-size-m: 3rem;
-  --section-desc-size-pc: 1.5rem;
-  --section-desc-size-m: 2rem;
-} */
 
 
 *,
@@ -152,6 +92,14 @@ html {
 
 }
 
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: -1;
+}
 
 
 body {
@@ -197,6 +145,7 @@ ul li a {
 .heading {
   color: var(--common-heading-color);
   font-weight: 800;
+  -webkit-text-stroke: 1px rgb(13, 48, 85);
 }
 
 .description {
